@@ -1,29 +1,44 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
-
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
-  routes
-})
+  routes: [{
+    name: 'LOGIN',
+    path: '/login',
+    component: () => import('@/views/login/Index')
+  }
+  , {
+    name: 'admin',
+    path: '/admin',
+    component: () => import('@/views/frame/Index'),
+    // children: [
+    //   {
+    //     name: 'My Tasks',
+    //     path: '/myTasks',
+    //     component: () => import('@/views/dashboard/Dashboard')
+    //   },
+    //   {
+    //     name: 'My Cars',
+    //     path: '/myCars',
+    //     component: () => import('@/views/dashboard/tables/RegularTables')
+    //   },
+    //   {
+    //     name: 'Disk Post Management',
+    //     path: '/diskPostManagement',
+    //     component: () => import('@/views/dashboard/component/Notifications')
+    //   },
+    //   {
+    //     name: 'Affair List',
+    //     path: '/affairList',
+    //     component: () => import('@/views/dashboard/component/Icons')
+    //   }
+    // ]
+  }
+]
+});
 
-export default router
+export default router;

@@ -1,0 +1,22 @@
+{
+  "personalInfo": "Personal Infomation",
+  "changePassword": "Change Password",
+  "logout": "Logout",
+  "myTasks": "My Tasks",
+  "myCars": "My Cars",
+  "diskPostManagement": "Disk Post Management",
+  "affairList": "Affair List",
+  "appName": "Veclie Dispatch System",
+  "welcome": "Welcome!",
+  "welcomeText": "Enter your username and password to log on",
+  "username": "Username",
+  "password": "Password",
+  "login": "Login",
+  "cannotBeBlankMsg": "Cannot be blank",
+  "loginFailMsg": "Username or password is invalid",
+  "noData": "No Data",
+  "noMore": "No More Data",
+  "filter": "Filter",
+  "ok": "OK",
+  "clear": "Clear"
+}
