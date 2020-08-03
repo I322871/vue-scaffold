@@ -32,13 +32,14 @@
       <v-list-group
         prepend-icon="mdi-calendar-check"
         color="white"
+        value="true"
         no-action>
         <template v-slot:activator>
           <v-list-item-content>
             <v-list-item-title>主项目</v-list-item-title>
           </v-list-item-content>
         </template>
-        <v-list-item to="/admin">
+        <v-list-item to="/myTasks">
           <v-list-item-content>
             <v-list-item-title>子项目1</v-list-item-title>
           </v-list-item-content>

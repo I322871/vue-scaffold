@@ -2,6 +2,7 @@
   <v-app>
     <app-bar/>
     <drawer/>
+    <container/>
   </v-app>
 </template>
 
@@ -11,7 +12,7 @@
     components: {
       AppBar: () => import('./AppBar'),
       Drawer: () => import('./Drawer'),
-    //   Container: () => import('./Container'),
+      Container: () => import('./Container')
     }
   }
 </script>

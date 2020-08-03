@@ -12,31 +12,15 @@ const router = new VueRouter({
     component: () => import('@/views/login/Index')
   }
   , {
-    name: 'admin',
     path: '/admin',
     component: () => import('@/views/frame/Index'),
-    // children: [
-    //   {
-    //     name: 'My Tasks',
-    //     path: '/myTasks',
-    //     component: () => import('@/views/dashboard/Dashboard')
-    //   },
-    //   {
-    //     name: 'My Cars',
-    //     path: '/myCars',
-    //     component: () => import('@/views/dashboard/tables/RegularTables')
-    //   },
-    //   {
-    //     name: 'Disk Post Management',
-    //     path: '/diskPostManagement',
-    //     component: () => import('@/views/dashboard/component/Notifications')
-    //   },
-    //   {
-    //     name: 'Affair List',
-    //     path: '/affairList',
-    //     component: () => import('@/views/dashboard/component/Icons')
-    //   }
-    // ]
+    children: [
+      {
+        name: 'MY_TASKS',
+        path: '/myTasks',
+        component: () => import('@/views/pages/Table')
+      }
+    ]
   }
 ]
 });

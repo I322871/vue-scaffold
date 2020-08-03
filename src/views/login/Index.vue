@@ -75,10 +75,9 @@
         }).then(response => {
             that.overlay = false;
           if (response && response.status === 200) {
-            // that.$router.replace({
-            //   name: 'MY_TASKS'
-            // });
-            console.error('success');
+            that.$router.replace({
+              name: 'MY_TASKS'
+            });
           } else {
             that.username.invalid = true;
             that.username.blankError = false;

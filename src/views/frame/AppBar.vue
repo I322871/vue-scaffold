@@ -8,7 +8,7 @@
     src="../../assets/appBar.jpg">
     <template v-slot:img="{ props }">
       <v-img
-        gradient="to top, rgba(25, 118, 210, 1), rgba(0, 0, 0, .666)"
+        gradient="to top, rgba(13, 59, 105, 1), rgba(0, 0, 0, .666)"
         v-bind="props"/>
     </template>
 
