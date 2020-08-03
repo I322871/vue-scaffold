@@ -10,19 +10,19 @@ const router = new VueRouter({
     name: 'LOGIN',
     path: '/login',
     component: () => import('@/views/login/Index')
-  }
-  , {
+  }, {
     path: '/admin',
+    redirect: { name: 'MY_TASKS' },
     component: () => import('@/views/frame/Index'),
-    children: [
-      {
-        name: 'MY_TASKS',
-        path: '/myTasks',
-        component: () => import('@/views/pages/Table')
-      }
-    ]
-  }
-]
+    children: [{
+      name: 'MY_TASKS',
+      path: 'myTasks',
+      component: () => import('@/views/pages/Table')
+    }]
+  }, {
+    path: '*',
+    redirect: { name: 'MY_TASKS' }
+  }]
 });
 
 export default router;

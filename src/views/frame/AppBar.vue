@@ -100,7 +100,7 @@
 
         <v-divider/>
 
-        <v-list-item @click="test">
+        <v-list-item @click="logout">
           <v-icon class="mr-2"> mdi-power </v-icon>
           <v-list-item-title> {{ $t('logout') }} </v-list-item-title>
         </v-list-item>
@@ -139,7 +139,12 @@
       ...mapMutations({
         setDrawer: 'SET_DRAWER',
       }),
-      test: () => {
+      test () {
+      },
+      logout () {
+        this.$router.replace({
+          name: 'LOGIN'
+        });
       }
     }
   }
