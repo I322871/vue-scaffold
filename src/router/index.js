@@ -1,27 +1,27 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: "hash",
   base: process.env.BASE_URL,
   routes: [{
-    name: 'LOGIN',
-    path: '/login',
-    component: () => import('@/views/login/Index')
+    name: "LOGIN",
+    path: "/login",
+    component: () => import("@/views/login/Index")
   }, {
-    path: '/admin',
-    redirect: { name: 'MY_TASKS' },
-    component: () => import('@/views/frame/Index'),
+    path: "/admin",
+    redirect: { name: "THEME_COLOR" },
+    component: () => import("@/views/frame/Index"),
     children: [{
-      name: 'MY_TASKS',
-      path: 'myTasks',
-      component: () => import('@/views/pages/Table')
+      name: "THEME_COLOR",
+      path: "themeColor",
+      component: () => import("@/views/themeColor/Index")
     }]
   }, {
-    path: '*',
-    redirect: { name: 'MY_TASKS' }
+    path: "*",
+    redirect: { name: "THEME_COLOR" }
   }]
 });
 

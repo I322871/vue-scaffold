@@ -2,11 +2,11 @@
   "personalInfo": "Personal Infomation",
   "changePassword": "Change Password",
   "logout": "Logout",
-  "myTasks": "My Tasks",
+  "tasks": "Tasks",
   "myCars": "My Cars",
   "diskPostManagement": "Disk Post Management",
   "affairList": "Affair List",
-  "appName": "Veclie Dispatch System",
+  "appName": "LK Space",
   "welcome": "Welcome!",
   "welcomeText": "Enter your username and password to log on",
   "username": "Username",
@@ -18,5 +18,6 @@
   "noMore": "No More Data",
   "filter": "Filter",
   "ok": "OK",
-  "clear": "Clear"
+  "clear": "Clear",
+  "themeColor": "Theme Color"
 }

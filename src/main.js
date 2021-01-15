@@ -1,33 +1,38 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import Vuetify from 'vuetify/lib';
-import i18n from './i18n'
-import axios from 'axios'
-import InfiniteLoading from 'vue-infinite-loading';
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import Vuetify from "vuetify/lib";
+import i18n from "./i18n";
+import axios from "axios";
+import InfiniteLoading from "vue-infinite-loading";
+import VueCookies from "vue-cookies";
+import "./css/main.css";
 
 Vue.config.productionTip = false;
 
 Vue.use(Vuetify);
 
-axios.interceptors.response.use(res => { 
+Vue.use(VueCookies);
+
+axios.interceptors.response.use(res => {
   return res;
 }, error => {
   if (error.response.status === 401) {
     router.push({
-      name: 'LOGIN'
+      name: "LOGIN"
     });
   } else {
     return error.response;
   }
 });
+axios.defaults.baseURL = "https://lk-space-service.herokuapp.com";
 Vue.prototype.$axios = axios;
 
 Vue.use(InfiniteLoading, {
   slots: {
-    noMore: i18n.t('noMore'),
-    noResults: ''
+    noMore: i18n.t("noMore"),
+    noResults: ""
   },
 });
 
@@ -41,4 +46,4 @@ new Vue({
   }),
   i18n,
   render: h => h(App)
-}).$mount('#app');
+}).$mount("#app");
